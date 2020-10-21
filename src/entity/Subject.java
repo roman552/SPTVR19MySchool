@@ -5,29 +5,31 @@
  */
 package entity;
 
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public class Subject {
+public class Subject implements Serializable{
     private String name;
-    private String duration;
-    private String teacher;
+    private Integer duration;
+    private Person teacher;
     
     public Subject(){
     }
 
-    public Subject(String name, String duration, String teacher) {
+    public Subject(String name, Integer duration, Person teacher) {
         this.name = name;
         this.duration = duration;
         this.teacher = teacher;
     }
 
-    public String getTeacher() {
+    public Person getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(String teacher) {
+    public void setTeacher(Person teacher) {
         this.teacher = teacher;
     }
 
@@ -39,11 +41,11 @@ public class Subject {
         this.name = name;
     }
 
-    public String getDuration() {
+    public Integer getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(Integer duration) {
         this.duration = duration;
     }
 
@@ -52,8 +54,8 @@ public class Subject {
         return "Subject{" 
                 + "name=" + name 
                 + ", duration=" + duration 
-                + ", teacher=" + teacher
-                + " " + teacher
+                + ", teacher=" + teacher.getFirstName()
+                + " " + teacher.getLastName()
                 + '}';
     }
     

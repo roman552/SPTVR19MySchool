@@ -4,20 +4,23 @@
  * and open the template in the editor.
  */
 package entity;
+
+import java.io.Serializable;
+
 /**
  *
  * @author user
  */
-public class Person {
+public class Person implements Serializable{
     private String firstName;
     private String lastName;
-    private Integer phone;
+    private String phone;
     private String role;
     
     public Person() {
     }
 
-    public Person(String firstName, String lastName, Integer phone, String role) {
+    public Person(String firstName, String lastName, String phone, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
@@ -42,11 +45,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

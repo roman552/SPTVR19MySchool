@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
  * @author user
  */
 public class Journal {
-    private String student;
+    private Person student;
     private String subject;
     private Integer mark;
     private String date;
@@ -22,7 +22,7 @@ public class Journal {
     public Journal(){
     }
 
-    public Journal(String person, String subject, Integer mark, String date) {
+    public Journal(Person person, String subject, Integer mark, String date) {
         this.student = person;
         this.subject = subject;
         this.mark = mark;
@@ -37,11 +37,11 @@ public class Journal {
         this.date = date;
     }
 
-    public String getStudent() {
+    public Person getStudent() {
         return student;
     }
 
-    public void setStudent(String student) {
+    public void setStudent(Person student) {
         this.student = student;
     }
 
@@ -66,8 +66,8 @@ public class Journal {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
         String dateStr = sdf.format(date);
         return "Journal{" 
-                + "student=" + student
-                +" " + student
+                + "student=" + student.getFirstName()
+                +" " + student.getLastName()
                 + ", subject=" + subject
                 + ", mark=" + mark 
                 + ", date=" + dateStr 
