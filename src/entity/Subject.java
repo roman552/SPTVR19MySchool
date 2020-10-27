@@ -9,14 +9,14 @@ import java.io.Serializable;
 
 /**
  *
- * @author user
+ * @author sillamae kutsekool
  */
 public class Subject implements Serializable{
     private String name;
     private Integer duration;
     private Person teacher;
-    
-    public Subject(){
+
+    public Subject() {
     }
 
     public Subject(String name, Integer duration, Person teacher) {
@@ -54,8 +54,8 @@ public class Subject implements Serializable{
         return "Subject{" 
                 + "name=" + name 
                 + ", duration=" + duration 
-                + ", teacher=" + teacher.getFirstName()
-                + " " + teacher.getLastName()
+                + ", teacher=" + teacher.getFirstname()
+                + " " + teacher.getLastname()
                 + '}';
     }
     

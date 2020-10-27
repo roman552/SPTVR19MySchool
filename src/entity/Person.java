@@ -9,48 +9,22 @@ import java.io.Serializable;
 
 /**
  *
- * @author user
+ * @author sillamae kutsekool
  */
 public class Person implements Serializable{
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String phone;
     private String role;
-    
+
     public Person() {
     }
 
-    public Person(String firstName, String lastName, String phone, String role) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Person(String firstname, String lastname, String phone, String role) {
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.phone = phone;
         this.role = role;
-    }
-    
-    
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getRole() {
@@ -61,16 +35,38 @@ public class Person implements Serializable{
         this.role = role;
     }
 
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
         return "Person{" 
-                + "firstName=" + firstName 
-                + ", lastName=" + lastName 
+                + "firstname=" + firstname 
+                + ", lastname=" + lastname 
                 + ", phone=" + phone 
                 + ", role=" + role 
                 + '}';
     }
     
-    
 }
-

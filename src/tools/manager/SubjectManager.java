@@ -64,8 +64,8 @@ public class SubjectManager {
                     ,i+1
                     ,subject.getName()
                     ,subject.getDuration()
-                    ,subject.getTeacher().getFirstName()
-                    ,subject.getTeacher().getLastName()
+                    ,subject.getTeacher().getFirstname()
+                    ,subject.getTeacher().getLastname()
             );
         }
     }

@@ -5,35 +5,35 @@
  */
 package entity;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
-
-
+import java.util.Date;
 
 /**
  *
- * @author user
+ * @author sillamae kutsekool
  */
-public class Journal {
+public class Journal implements Serializable{
     private Person student;
-    private String subject;
+    private Subject subject;
     private Integer mark;
-    private String date;
-    
-    public Journal(){
+    private Date date;
+
+    public Journal() {
     }
 
-    public Journal(Person person, String subject, Integer mark, String date) {
-        this.student = person;
+    public Journal(Person student, Subject subject, Integer mark, Date date) {
+        this.student = student;
         this.subject = subject;
         this.mark = mark;
         this.date = date;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -45,11 +45,11 @@ public class Journal {
         this.student = student;
     }
 
-    public String getSubject() {
+    public Subject getSubject() {
         return subject;
     }
 
-    public void setSubject(String subject) {
+    public void setSubject(Subject subject) {
         this.subject = subject;
     }
 
@@ -66,13 +66,12 @@ public class Journal {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm");
         String dateStr = sdf.format(date);
         return "Journal{" 
-                + "student=" + student.getFirstName()
-                +" " + student.getLastName()
-                + ", subject=" + subject
+                + "student=" + student.getFirstname()
+                + " " + student.getLastname()
+                + ", subject=" + subject.getName()
                 + ", mark=" + mark 
                 + ", date=" + dateStr 
                 + '}';
     }
-    
     
 }
