@@ -29,11 +29,13 @@ class App {
     
     private PersonManager personManager = new PersonManager();
     private SubjectManager subjectManager = new SubjectManager();
+    private JournalManager journalManager = new JournalManager();
 
     public App() {
         SaveToFile saveToFile = new SaveToFile();
         this.listPersons = saveToFile.loadFromFile("listPersons");
         this.listSubjects = saveToFile.loadFromFile("listSubjects");
+        this.listJournals = saveToFile.loadFromFile("listJournals");
     }
     
     public void run(){
@@ -82,11 +84,10 @@ class App {
                     subjectManager.printlistSubjects(listSubjects);
                     break;
                 case "7":
-                    JournalManager journalManager = new JournalManager();
                     journalManager.setMarkToUser(listSubjects, listPersons, listJournals);
                     break;
                 case "8":
-                    
+                    journalManager.printMarks(listPersons, listJournals);
                     break;
                 case "9":
                     

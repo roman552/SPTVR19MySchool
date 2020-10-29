@@ -6,6 +6,7 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -68,5 +69,7 @@ public class Person implements Serializable{
                 + ", role=" + role 
                 + '}';
     }
+
+    
     
 }

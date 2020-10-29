@@ -17,7 +17,7 @@ import tools.interfaces.Saveable;
 
 /**
  *
- * @author user
+ * @author sillamae kutsekool
  */
 public class SaveToFile implements Saveable{
 

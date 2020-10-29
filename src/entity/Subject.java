@@ -6,6 +6,7 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -58,6 +59,8 @@ public class Subject implements Serializable{
                 + " " + teacher.getLastname()
                 + '}';
     }
+
+    
     
     
 }
